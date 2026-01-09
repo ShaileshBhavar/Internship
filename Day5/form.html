@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From</title>
+</head>
+<body style="align-items: center; justify-content: center; display: flex; ">
+    <form action="/Day5/form.html" method="post" enctype="multipart/form-data" style="background-color: lightgray; width: 40%; margin-top: 20px;" >
+        <!-- string -->
+        <!-- file -->
+        <fieldset >
+            <legend style="text-align: center;"><b>Personal Information</b></legend>
+            <label for="profilePic">Profile Picture:</label>
+            <input type="file" id="profilePic" name="profilePic" accept="image/*" required><br><br>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Username" required>&nbsp; &nbsp; &nbsp;
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; 
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" maxlength="10" placeholder="Enter 10 digit number" pattern="[0-9]{10}" required><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>&nbsp; &nbsp; &nbsp;
+
+            <label>Gender:-</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label><br><br>
+
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" rows="4" cols="30" placeholder="Enter your address here..." required></textarea><br><br>
+            <label for="State">State:</label>
+            <select name="state" required>
+                <option>select your state</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Goa">Goa</option>
+            </select><br><br>
+
+            <label>Subjects:</label>
+            <input type="checkbox" id="html" name="subjects" value="HTML"><b>HTML</b>
+            <input type="checkbox" id="css" name="subjects" value="CSS"><b>CSS</b><br><br>
+
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+</body>
+</html>

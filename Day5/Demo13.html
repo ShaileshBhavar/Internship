@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo13</title>
+</head>
+<body style="background-color: whitesmoke; ">
+    <div style="background-color: white; width: 60%; height: 700px; margin: auto; margin-top: 20px; justify-content: center; border-radius: 10px;">
+
+        <div style="height: 70px; width: 100%;">
+            <h1 style="text-align: center; padding-top: 15px;">Account Opening Form</h1>
+        </div>
+
+        <form>
+            <div style="width: 45%; height: 550px; float: left; padding: 20px;">
+                <legend style="text-align: left;"><h2>Personal Information</h2></legend><hr>
+
+                <label for="fullName">Full Name:</label><br>
+                <input type="text" id="fullName" name="fullName" placeholder="Prefix" required style="width: 100%; height: 25px; border-radius: 5px;"><br><br>
+                <input type="text" id="fullName" name="fullName" placeholder="First Name" required style="width: 100%; height: 25px; border-radius: 5px;"><br><br>
+                <input type="text" id="fullName" name="fullName" placeholder="Last Name" style="width: 100%; height: 25px; border-radius: 5px;"><br><br>
+
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob" required style="width: 100%; height: 25px; border-radius: 5px;"><br><br>
+
+                <label >Mother's Maiden Name:</label><br>
+                <input type="text" id="motherName" name="motherName" placeholder="Mother's Maiden Name" required style="width: 100%; height: 25px; border-radius: 5px;"><br><br>
+
+                <label for="phone">Telephone No:</label><br>
+                <input type="tel" id="phone" name="phone" maxlength="10" placeholder="Enter valid 10-digit number" pattern="[0-9]{10}" required style="width: 100%; height: 25px; border-radius: 5px;"><br><br>
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" placeholder="example@example.com" required style="width: 100%; height: 25px; border-radius: 5px;"><br><br>
+
+                <label for="address">Residential Address:</label><br>
+                <textarea id="address" name="address" rows="4" cols="30" placeholder="Enter your address here..." required style="width: 100%; height: 30px; border-radius: 5px;"></textarea><br><br>
+
+            </div>
+
+            <div style="width: 45%; height: 550px;float: right; padding: 20px;">
+                <legend style="text-align: left;"><h2>Account Details</h2></legend><hr>
+
+                <label for="accountType">Account Type:</label><br>
+                <select id="accountType" name="accountType" required style="width: 100%; height: 25px; border-radius: 5px;">
+                    <option value="">Select Account Type</option>
+                    <option value="savings">Savings Account</option>
+                    <option value="current">Current Account</option>
+                    <option value="fixed">Fixed Deposit Account</option>
+                </select><br><br>
+
+                <label>Account Category:</label><br>
+                <select id="accountCategory" name="accountCategory" required style="width: 100%; height: 25px; border-radius: 5px;">
+                    <option value="">Select Category</option>
+                    <option value="individual">Individual</option>
+                    <option value="joint">Joint</option>
+                    <option value="corporate">Corporate</option>
+                </select><br><br>
+
+                <label for="monthlySalary">Monthly Salary (IN USD):</label><br>
+                <input type="number" id="monthlySalary" name="monthlySalary" placeholder="Enter your monthly salary" required style="width: 100%; height: 25px; border-radius: 5px;"><br><br>
+
+                <label for="date">Date:</label><br>
+                <input type="date" id="date" name="date" required style="width: 100%; height: 20px; border-radius: 5px;"><br><br>
+
+                <label for="city">City:</label><br>
+                <input type="text" id="city" name="city" placeholder="Enter your city" required style="width: 100%; height: 25px; border-radius: 5px;"><br><br>
+
+                <label for="State/Proviance">State/Proviance:</label><br>
+                <input type="text" id="State/Proviance" name="State/Proviance" placeholder="Enter your state/province" required style="width: 100%; height: 25px; border-radius: 5px;"><br><br>
+            </div>
+
+            <button type="submit"style="width:90%; height:25px; border-radius:5px; padding:5px; display:block; margin:10px auto; background-color: #4CAF50; color: white;">Submit</button>
+        </form>
+    </div>
+    
+</body>
+</html>
