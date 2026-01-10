@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box</title>
+
+    <style>
+        /* Border Property */
+        .box {
+            border: 5px solid black; border-color: red;
+            width: 25%;
+            height: 200px; float: left;
+            background-color: yellow;
+            box-sizing: border-box; 
+            margin-top: 50px;    
+        }
+
+       
+        .box2 {
+            border: 10px solid black; float: left;
+            width: 50%;
+            height: 200px; 
+            background-color: lightgreen;
+            box-sizing: border-box; 
+            margin-top: 50px; margin-left: 50px;
+
+            outline: 10px solid red;  /* outline property */
+        }
+
+        .box3{
+            border: 10px solid black; float: left;
+            width: 40%;
+            height: 200px; 
+            background-color: red;
+            box-sizing: border-box; 
+            margin-top: 50px; margin-left: 50px;
+            border-bottom-left-radius: 30px; /* border radius property */
+            border-top-right-radius: 30px;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <div class="box2"></div>
+
+    <div class="box3"></div>
+</body>
+</html>
