@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo18</title>
+
+    <style>
+        .container{
+            height: 100vh; width: 100%;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThnWRWoOVLDYIWjgGMshSAJvpwTjeEg4-NrQ&s);
+            background-size: cover; background-attachment: fixed; display: flex
+        }   
+
+        .b1{
+            width: 50%; height: 700px;
+            color: white; font-size: 25px;
+            
+            
+        }
+
+        .b2{
+            width: 45%; height: auto; float: left;
+            color: white; font-size: 25px;
+            margin-left: 50px; margin-left: 15px;
+            margin-top: 40px;
+        }
+        .b3{
+            width: 45%; height: auto; float: left;
+            color: white; font-size: 25px;
+            margin-left: 5px; padding-left: 20px;
+            margin-top: 40px;
+        }
+        
+        #c1{
+            width: 200px; height: 50px;
+            border: 2px solid red; margin: 10px;
+            text-align: center; line-height: 50px;
+            list-style: none;
+        }
+
+        .b4{
+            width: 30%; height: 500px; 
+            
+            margin-top: 40px; margin-left: 50px;
+            border-left: 5px solid red; border-right: 5px solid red;
+            border-top-left-radius: 10px; border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+      <DIV class="b1">
+        <div class="b2">
+            <li id="c1">HTML</li>
+            <li id="c1">CSS</li>
+            <li id="c1">BOOTSTRAP</li>
+            <li id="c1">JS</li>
+        </div>
+        <div class="b3">
+            <li id="c1">PHP</li>
+            <li id="c1">JAVA</li>
+            <li id="c1">PYTHON</li>
+            <li id="c1">NODE JS</li>
+        </div>
+       
+         <img src="f1.png" style="margin-bottom: 500px;">
+      </DIV>
+      
+      <div class="b4">
+        <form class="c2" action="/CSS/Demo18.html" method="post" >
+            <legend style="text-align: center; font-size: 30px; font-weight: bold; margin-top: 20px; color: white;">REGISTRATION FORM</legend>
+
+            <input type="text" name="fname" placeholder="Enter your full name" style="width: 90%; height: 30px;  margin-top: 50px; margin-left: 20px; text-align: center; border-bottom: 5px solid red; border-radius: 10px; background-color: black; opacity: 60%;" ><br><br>
+
+            <input type="email" name="email" placeholder="Enter your email" style="width: 90%; height: 30px; margin-left: 20px; text-align: center; border-bottom: 5px solid red; border-radius: 10px; background-color: black; opacity: 60%;"><br><br>
+
+            <input type="tel" name="phone" placeholder="Enter your phone number" style="width: 90%; height: 30px; margin-left: 20px; text-align: center; border-bottom: 5px solid red; border-radius: 10px; background-color: black; opacity: 60%;"><br><br>
+
+            <select name="Course" style="width: 90%; height: 30px; margin-left: 20px; text-align: center; border-bottom: 5px solid red; border-radius: 10px; color: white; background-color: black; opacity: 60%;">
+                <option value="" disabled selected>Select your course</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="BOOTSTRAP">BOOTSTRAP</option>
+                <option value="JS">JS</option>
+                <option value="PHP">PHP</option>
+                <option value="JAVA">JAVA</option>
+                <option value="PYTHON">PYTHON</option>
+                <option value="NODE JS">NODE JS</option>
+            </select>
+
+            <textarea name="msg" rows="4" cols="30" placeholder="Enter your msg here..." style="width: 90%; height: 100px; margin-top: 20px; margin-left: 20px; text-align: center; border-bottom: 5px solid red; border-radius: 10px;background-color: black; opacity: 60%;"></textarea><br><br>
+
+            <input type="submit" value="Ragister" style="width: 30%; height: 40px; margin-left: 35%; margin-top: 20px; background-color: red; color: white; font-size: 20px; border-radius: 10px; cursor: pointer;">
+        </form>
+      </div>
+
+    </div>
+</body>
+</html>

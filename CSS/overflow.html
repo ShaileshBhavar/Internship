@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow prop</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 150px;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 10px;
+            font-size: 16px;
+            background-color: wheat;
+        }
+
+        .overflow-visible{
+            overflow: visible;
+        }
+
+        .overflow-hidden{
+            overflow: hidden;
+        }
+
+        .overflow-scroll{
+            overflow: scroll;
+        }
+
+        .overflow-auto{
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box overflow-visible">This is visible <br> <p>lorem
+    ipsum dolor sit amet consectetur adipisicing elit. Aliquid, eligendi sed fuga, repellendus, sit saepe quos dolore nulla quia molestias iure cumque maiores quasi expedita voluptatum animi quo at voluptatem.
+    </p></div>
+    <div class="box overflow-hidden">This is hidden <br> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quasi doloremque dolores. Placeat quod ipsam rerum voluptatibus recusandae saepe reprehenderit repellat nostrum laborum temporibus, in neque, laudantium quidem, eveniet a.</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, eligendi sed fuga, repellendus, sit saepe quos dolore nulla quia molestias iure cumque maiores quasi expedita voluptatum animi quo at voluptatem.</p></div>
+    <div class="box overflow-scroll">This is scrollable <br>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit fugiat totam, sequi, vero tenetur quos, mollitia neque quia dignissimos et exercitationem numquam! Impedit, illum. Repellat debitis asperiores dolore ipsam sapiente?</p>
+    </div>
+    <div class="box overflow-auto">This is auto <br> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe omnis facere aliquid magnam placeat vero ea rem obcaecati voluptate cupiditate, recusandae voluptas consequuntur esse, corrupti veniam suscipit! Doloribus, animi molestiae.</p> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, eligendi sed fuga, repellendus, sit saepe quos dolore nulla quia molestias iure cumque maiores quasi expedita voluptatum animi quo at voluptatem.</p></div>   
+</body>
+</html>
