@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Meet</title>
+    <style>
+        body{
+            margin: 0; 
+        }
+        .main_container{
+            width: 100%; height: 730px;
+            background-color: #202124; 
+        }
+        .left_box{
+            width: 70%; height: 650px; float: left;
+            
+        }
+        .chatbox{
+            width: 29%; height: 620px; float: left;
+            background-color: white;
+            border-radius: 10px; margin-top: 15px;
+            
+        }
+
+        .b1{
+            width: 30%; height: 30%; float: left;
+            background-color: #3C4043; margin-left: 25px; margin-top: 15px;
+            border-radius: 10px; position: relative;
+            
+        }
+        .circle{
+            width: 100px; height: 100px;
+            border-radius: 50%;
+            position: relative; left: 35%; top: 20px;
+            overflow: hidden;
+        }
+        .icon1{
+            font-size: 30px;  
+            position: relative; left: 90%;  color: white;       
+        }
+        .b1 h3{
+            margin-top: 35px; margin-left: 5px;
+            color: white; 
+            
+        }
+
+        .b2{
+            width: 400px; height: 35px; background-color: #3C4043;
+            z-index: 999; color: white;
+            box-sizing: border-box;
+            border-radius: 5px; 
+            position: absolute; bottom: 130px; left: 25px;
+            font-size: 13px; 
+            box-shadow: 0px 5px 20px rgba(0,0,0,1);
+        }
+        .b2 p{
+            font-size: 16px;  
+            line-height: 0; 
+            font-weight: bold;
+        }
+
+        /* chatbox */
+        .r0{
+            flex: 1; gap: 10px; display: flex; flex-direction: column;
+            background-color: whitesmoke; 
+            height: 69%; 
+            width: 90%;
+            margin-left: 20px; margin-top: 10px; border-radius: 10px;
+            overflow-y: auto;
+        }
+        .r1{
+            height: 50px; 
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0 20px; border-bottom: 1px solid #ccc;
+            border-top-right-radius: 10px; border-top-left-radius: 10px;
+        }
+        .r1 h3{
+            margin: 0; line-height: 2.5; 
+            padding-left: 20px; font-size: 20px;
+        }
+        .r2{
+            height: 50px; 
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0 20px; background-color: #f1f1f1; border-radius: 10px;
+            margin: 20px; 
+        }
+        .r2 h3{
+            font-size: 16px; ;
+        }
+        /* Switch */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 24px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            border-radius: 24px;
+            transition: 0.4s;
+        }
+        .slider::before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            top: 3px;
+            background-color: white;
+            border-radius: 50%;
+            transition: 0.4s;
+        }
+        .switch input:checked + .slider {
+            background-color: #1a73e8;
+        }
+        .switch input:checked + .slider::before {
+            transform: translateX(16px);
+        }
+        .r3{
+            width: 100%; height: 100px; 
+            background-color: #f1f1f1;
+            border-radius: 10px; display: flex; align-items: center; justify-content: center;
+        }
+        .r3 p{
+            text-align: center;
+            color: #65696D; font-size: 16px;
+        }
+
+        /* msg */
+        .msg {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .msg-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: #202124;
+        }
+
+        .msg-header h3 {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .timestamp {
+            font-weight: normal;
+            color: #65696D;
+            font-size: 11px;
+        }
+
+        .msg-body p {
+            background-color: #e0e0e0;
+            padding: 8px 12px;
+            border-radius: 12px;
+            margin: 0;
+            font-size: 13px;
+            max-width: 80%;
+        }
+
+        .chat-input {
+            position: relative;
+            width: 90%; height: 20px;
+            padding: 10px; margin-top: 5px; margin-left: 20px;
+            background-color: #f1f1f1;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .chat-input input {
+            width: 90%;
+            padding: 8px 40px 8px 15px; /* space for icon */
+            border: none;
+            border-radius: 30px;
+            font-size: 14px;
+            outline: none;
+            background-color: #f1f1f1;
+        }
+
+        .send-icon {
+            position: absolute;
+            right: 15px;
+            font-size: 20px;
+            color: #1a73e8;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .send-icon:hover {
+            color: #1558b0;
+        }
+
+        .meet-topbar{
+            width:100%;
+            height:50px;
+            background:#202124;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:0 15px;
+            box-sizing:border-box;
+            color:white;
+            font-family:Roboto,Arial,sans-serif;
+        }
+
+        /* Left */
+        .top-left{
+            font-size:14px;
+            display:flex;
+            gap:10px;
+            color:#e8eaed;
+        }
+        .meet-code{
+            color:#9aa0a6;
+        }
+
+        /* Center */
+        .top-center{
+            display:flex;
+            gap:15px;
+            align-items:center;
+        }
+        .top-center ion-icon{
+            font-size:20px;
+            background:#303134;
+            padding:8px;
+            border-radius:50%;
+            cursor:pointer;
+        }
+        .top-center ion-icon:hover{
+            background:#3c4043;
+        }
+
+        /* Red camera */
+        .red{
+            color:#ea4335;
+        }
+
+        /* End call */
+        .end{
+            background:#ea4335 !important;
+            color:white;
+        }
+
+        /* Right */
+        .top-right{
+            display:flex;
+            gap:15px;
+        }
+        .top-right ion-icon{
+            font-size:20px;
+            cursor:pointer;
+            color:#e8eaed;
+        }
+
+
+    </style>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="main_container">
+
+        <div class="left_box">
+            <div class="b1">
+                <ion-icon name="mic-off-outline" class="icon1"></ion-icon>
+                <div class="circle">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg8eNT0FHxPos3-tkmer814oGCWmv3b6QUdw&s" alt="img1" style="width: 100%;  object-fit: cover;">
+                </div>
+                <h3>Daenerys Targaryen</h3>
+            </div>
+            <div class="b1">
+                <ion-icon name="mic-off-outline" class="icon1"></ion-icon>
+                <div class="circle">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8zJE-hz_gfuChlvNYMC3VSd3bkY_sGnb2bg&s" alt="img2" style="width: 100%;  object-fit: cover;">
+                </div>
+                <h3>Jon Snow</h3>
+            </div>
+            <div class="b1">
+                <ion-icon name="mic-off-outline" class="icon1"></ion-icon>
+                <div class="circle">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8QOKwFf8WN50NrxoUesy8LckqXHfMqd2Lbg&s" alt="img3" style="width: 100%;  object-fit: cover;">
+                </div>
+                <h3>Arya Stark</h3>
+            </div>
+            <div class="b1">
+                <ion-icon name="mic-off-outline" class="icon1"></ion-icon>
+                <div class="circle">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGOSXN7C9oky7muC4HTmAclTfbCtztBna0sg&s" alt="img4" style="width: 100%;  object-fit: cover;">
+                </div>
+                <h3>Sansa Stark</h3>
+            </div>
+            <div class="b1">
+                <ion-icon name="mic-off-outline" class="icon1"></ion-icon>
+                <div class="circle">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLjSJoHiBxFT5BMGr4AbFo3ileoWnWxnyjTg&s" alt="img5" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>jaime Lannister</h3>
+            </div>
+            <div class="b1" style="border: 5px solid #669DF6;">
+                <ion-icon name="mic-outline" class="icon1" style="color: #669DF6;"></ion-icon>
+                <div class="circle" style=" border: 5px solid #121313; outline: 5px solid #595C5F; box-sizing: border-box;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRLZ_gAZNOC-xaw0DTIV11mWsLw6gAWZ36Yw&s" alt="img6" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>Tyrion Lannister</h3>
+            </div>
+            <div class="b1">
+                <ion-icon name="mic-off-outline" class="icon1"></ion-icon>
+                <div class="circle">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxL309-I_1s03NF2nd_pDA0qqqZ6L3hEXSDQ&s" alt="img7" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3>Hodor</h3>
+            </div>
+            <div class="b1">
+                <ion-icon name="mic-off-outline" class="icon1"></ion-icon>
+                <div style="width: 80px; height: 80px; border-radius: 50%; position: absolute; left: 30%; top: 50px; overflow: hidden;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXRdEfqjOdignkT2R8ofH5hBWk2XdRLColNA&s" alt="img8" style="width: 100%;  object-fit: cover;">
+                </div>
+                <div style="width: 80px; height: 80px; border-radius: 50%; position: absolute; left: 50%; top: 50px; overflow: hidden;">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThLWciEI6qfa6SK_Riu07A49630li2lB3rSg&s" alt="img9" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 style="margin-top: 100px; margin-left: 40%;">20 others</h3>
+            </div>
+            <div class="b1">
+                <ion-icon name="mic-off-outline" class="icon1"></ion-icon>
+                <div class="circle">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1-AyLAjCsHG65v_ux9mwRYwoPNwkSOsuhjw&s" alt="img10" style="width: 100%;  object-fit: cover;">
+                </div>
+                <h3>Ramsay Bolton</h3>
+            </div>
+
+            <div class="b2">
+                <p>Theon Greyjoy has left the meeting</p>
+            </div>
+        </div>
+
+        <div class="chatbox">
+            <div class="r1">
+                <h3>In-Call Messages</h3>
+                <ion-icon name="close-outline" style="font-size: 30px; font-weight: bold; color: #65696D;"></ion-icon>
+            </div>
+            <div class="r2">
+                <h3>Let everyone send messages</h3>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="r0">            
+                <div class="r3">
+                    <p>Unless they're pinned,messages can only be seen by pepople in 
+                        the call when the message is sent.All mesage are deleted when the 
+                        call is ends.
+                    </p>
+                </div>
+
+                <div class="msg">
+                    <div class="msg-header">
+                        <h4>Knight King</h4> 
+                        <span class="timestamp">12:30 AM</span>
+                    </div>
+                    <div class="msg-body">
+                        <p>Hello John</p>
+                    </div>
+                </div> 
+
+                <div class="msg">
+                    <div class="msg-header">
+                        <h3>Arya Strak</h3>
+                        <span class="timestamp">12:31 AM</span>
+                    </div>
+                    <div class="msg-body">
+                        <p>Hi Knight King, how are you?</p>
+                    </div>    
+                </div>
+
+                <div class="msg">
+                    <div class="msg-header">
+                        <h3>Daenerys</h3>
+                        <span class="timestamp">12:32 AM</span>
+                    </div>
+                    <div class="msg-body">
+                        <p>Jon, your WiFi is slower than a white walker in the desert. ❄️📶</p>
+                    </div>
+                </div> 
+
+                <div class="msg">
+                    <div class="msg-header">
+                        <h3>Tyrion Lannister</h3>
+                        <span class="timestamp">12:33 AM</span>
+                    </div>
+                    <div class="msg-body">
+                        <p>I drink and I Zoom. 🍷😂</p>
+                    </div>
+                </div> 
+
+                <div class="msg">
+                    <div class="msg-header">
+                        <h3>Hodor</h3>
+                        <span class="timestamp">12:34 AM</span>
+                    </div>
+                    <div class="msg-body">
+                        <p>Hodor… Hodor? 🤔</p>
+                    </div>
+                </div> 
+
+                <div class="msg">
+                    <div class="msg-header">
+                        <h3>Sansa Stark</h3>
+                        <span class="timestamp">12:35 AM</span>
+                    </div>
+                    <div class="msg-body">
+                        <p>Can someone please stop sending memes of my family? 🙄😂</p>
+                    </div>
+                </div> 
+
+            </div>
+
+            <div class="chat-input">
+                <input type="text" placeholder="Type a message..." id="chatBox">
+                <ion-icon name="send-outline" id="sendIcon" class="send-icon"></ion-icon>
+            </div>
+
+        </div>
+
+        <div class="meet-topbar">
+
+            <!-- Left -->
+            <div class="top-left">
+                <span>4:58 PM</span>
+                <span class="meet-code">cbj-qpkq-idp</span>
+            </div>
+
+            <!-- Center -->
+            <div class="top-center">
+                <ion-icon name="chevron-up-outline"></ion-icon>
+                <ion-icon name="mic-outline"></ion-icon>
+                <ion-icon name="videocam-off-outline" class="red"></ion-icon>
+                <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                <ion-icon name="happy-outline"></ion-icon>
+                <ion-icon name="desktop-outline"></ion-icon>
+                <ion-icon name="hand-left-outline"></ion-icon>
+                <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                <ion-icon name="call-outline" class="end"></ion-icon>
+            </div>
+
+            <!-- Right -->
+            <div class="top-right">
+                <ion-icon name="information-circle-outline"></ion-icon>
+                <ion-icon name="people-outline"></ion-icon>
+                <ion-icon name="chatbubble-outline"></ion-icon>
+                <ion-icon name="shield-checkmark-outline"></ion-icon>
+                <ion-icon name="lock-closed-outline"></ion-icon>
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+</html>

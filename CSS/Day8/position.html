@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posotion</title>
+
+    <style>
+        .box1{
+            height: 200px; width: 200px; float: left; background-color: red;
+        }
+        .box2{
+            height: 200px; width: 200px; float: left; background-color: green;
+            position: static; top: 100px;/* no change */
+        }
+        .box3{
+            height: 200px; width: 200px; float: left;  background-color: yellow;
+            position: relative; top: 200px; /* change but work in window */
+        }
+        .box4{
+            height: 200px; width: 200px; float: left; background-color: gray;
+            position: absolute; right: 200px; /* full control */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">default</div>
+    <div class="box2">static</div>
+    <div class="box3">relative</div>
+    <div class="box4">absolute</div>
+   
+</body>
+</html>
