@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .box{
+            width: 200px; height: 200px; float: left;
+            background-color: green;
+            animation-name: ani;
+            animation-duration: 10s;
+            animation-iteration-count: infinite; /* loop */
+        }
+
+        /* 10s=>100% */
+        /* 1s=>10% */
+        @keyframes ani{
+            0%{background-color: green;}
+            10%{background-color: purple;}
+            20%{background-color: yellow;}
+            30%{background-color: pink;}
+            40%{background-color: silver;}
+            50%{background-color: gold;}
+            60%{background-color: gray;}
+            70%{background-color: blue;}
+            80%{background-color: orange;}
+            90%{background-color: brown;}
+            100%{background-color: black;}
+        }
+
+
+        /* from-to method */
+        /* @keyframes ani{
+            form{
+                background: linear-gradient(135deg,red,yellow);
+            }
+            to{
+                background: linear-gradient(135deg,violet,purple);
+                transform: rotate(90deg);
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
