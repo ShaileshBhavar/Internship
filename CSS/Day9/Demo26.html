@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .box{
+            width: 800px; height: 750px; float: right;
+            background-image: url(https://png.pngtree.com/png-clipart/20230823/original/pngtree-stairs-made-of-brick-close-up-architec-clip-art-vector-png-image_10628609.png);
+            background-size: cover; background-position: center; 
+            position: relative;
+            overflow: hidden; 
+        }
+        .box2{
+            width: 100%; height: 200px;
+            background-color: white; z-index: 9999; overflow: hidden;
+        }
+        .player{
+            width: 200px;
+            position: absolute;
+            bottom: 60px;
+            left: -60px;
+            animation: play 10s linear infinite;
+        }
+        @keyframes play{
+            0%{ 
+                bottom:60px; 
+                left:-60px; 
+            }
+            10%{
+                bottom: 150px;
+                left: -60px;
+            }
+            20%{
+                bottom: 150px;
+                left: 60px;
+            }
+            30%{
+                bottom: 250px;
+                left: 60px;
+            }
+            40%{
+                bottom: 250px;
+                left: 150px;
+            }
+            50%{
+                bottom: 350px;
+                left: 150px;
+            }
+            60%{
+                bottom: 350px;
+                left: 250px;
+            }
+            70%{
+                bottom: 450px;
+                left: 250px;
+            }
+            80%{
+                bottom: 450px;
+                left: 340px;
+            }
+            90%{
+                bottom: 550px;
+                left: 340px;
+            }
+            100%{
+                bottom: 550px;
+                left: 700px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box2"></div>
+        <img src="https://cdn.pixabay.com/animation/2024/09/11/14/50/14-50-57-604_512.gif" alt="character" class="player">
+    </div>
+</body>
+</html>
