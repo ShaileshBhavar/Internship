@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media query</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .box1{
+            width: 12.5%; height: 300px;
+            float: left;
+            background-color: yellow;
+            border: 2px solid black;
+            box-sizing: border-box;
+        }
+        @media(max-width: 650px){
+            /* MOb */
+            .box1{
+                width: 50%;
+            }
+        }
+        @media(min-width: 651px){
+            /* Tab */
+            .box1{
+                width: 33.33%;
+            }
+        }
+        @media(min-width: 950px){
+            /* Lap */
+            .box1{
+                width: 25%;
+            }
+        }
+        @media(min-width: 1200px){
+            /* Comp */
+            .box1{
+                width: 12.5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+    <div class="box1"></div>
+</body>
+</html>
