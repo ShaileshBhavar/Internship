@@ -1,0 +1,1800 @@
+body{
+    margin: 0;
+    padding: 0;  
+}
+.main{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+.menu{
+    height: 100px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: fixed; z-index: 9999;
+}
+
+.menu_logo {
+    width: 15%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+.menu_logo img{
+    width: 120px;
+    margin-top: 20px;
+}
+.menu_option{
+    width: 85%;
+    height: 100%;
+    float: left;
+}
+.menu_option ul li{
+    list-style-type: none;
+    display: inline-block;
+    font-size: 16px; 
+    margin-left:30px;
+    margin-top: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu_option .book_btn{
+    display: inline-block;
+    height: 50px;
+    width: 120px;
+    background-color: #FF0000;
+    color: white;
+    position: relative;
+    left: 90%;
+    bottom: 50px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+.menu_option .menu_btn{
+    display: none;
+}
+
+@media(max-width: 667px){
+    .menu_option ul{
+        display: none;
+    }
+    .menu_logo{
+        width: 30%;
+    }
+    .menu_option{
+        width: 70%;
+        text-align: right;
+    }
+    .menu_option .menu_btn{
+        display: inline-block;
+        margin-top: 30px;
+        margin-right: 20px;
+        width: 60px;
+        height: 30px;
+        border-radius: 5px;
+    }
+} 
+
+.slider{
+    width: 100%;
+    height: 730px;
+    background-size: cover;
+    animation: ani 20s infinite;
+    animation-delay: 2s;
+   /*  overflow: scroll; */
+}
+@keyframes ani{
+    0%{background-image: url("images/home_page/Slider_image1.jpg");}
+    10%{background-image: url("images/home_page/slider_image2.jpg");}
+    20%{background-image: url("images/home_page/slider_image3.jpg");}
+    30%{background-image: url("images/home_page/Slider_image4.jpg");}
+    40%{background-image: url("images/home_page/slider_image5.jpg");}
+    50%{background-image: url("images/home_page/Slider_image6.jpg");}
+    60%{background-image: url("images/home_page/Slider_image7.jpg");}
+    70%{background-image: url("images/home_page/Slider_image8.jpg");}
+    80%{background-image: url("images/home_page/Slider_image9.jpg");}
+    90%{background-image: url("images/home_page/Slider_image10.jpg");}
+    100%{background-image: url("images/home_page/Slider_image11.jpg");}
+}
+
+.slider_filter{
+    width: 90%;
+    height: 100px;
+    float: left; 
+    background-color: rgba(255, 255, 255, 0.5);;
+    margin-left: 5%;
+    position: absolute;
+    top: 600px;
+    border: 10px solid rgba(210, 211, 197, 0.5);
+    box-sizing: border-box;
+}
+
+.filter_box{
+    width: 22.5%;
+    height: 100%;
+    float: left;
+    margin-left: 2%;
+}
+
+.filter_box select{
+    width: 95%;
+    height: 30px;
+}
+.filter_box input{
+    width: 48%;
+    height: 25px;
+    float: left;
+}
+.filter_box .inp{
+    clear: both;
+}
+.filter_box label{
+    margin: 10px;
+    float: left;
+}
+.filter_box button{
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    margin-left: 50px;
+    margin-top: 19px;
+    cursor: pointer;
+}
+
+/* @media (max-width: 667px){
+    .slider{
+        height: auto;
+    } 
+    .slider_filter{
+        height: auto;
+        position: relative;
+        top: 400px;
+    } 
+    .filter_box{
+        width: 90%;
+       
+    }
+    .filter_box .date{
+        clear: both;
+    }
+    
+} */
+
+.sec{
+    float: left; width: 100%;
+}
+
+.container1{
+    width: 75%;
+    height: 350px;
+    background-color: white;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px 10% 20px 10% ;
+}
+
+.o_title{
+    font-size: 36px;
+    font-weight: 200;
+    color: #58595b;
+    line-height: 48px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+.o_para{
+    font-size: 20px;
+    font-weight: 100;
+    color: #58595b;
+    text-align: justify;
+}
+
+.o_para b{
+    font-weight: bold;
+}
+
+.container2{
+    width: 75%; float: left;
+    margin: auto;
+    padding: 20px 10% 20px 10%;
+}
+
+.container2 .room1{
+    width: 50%;
+    height: 357px;
+    float: left;
+}
+.container2 .info1{
+    width: 44%;
+    height: 347px;
+    float: left;
+    padding: 5px 3% 5px 3%;
+}
+.container2 h2{
+   font-size: 20px;
+   font-weight: 600;
+   color: #58595b;
+   margin-top: 20px;
+}
+
+.container2 p{
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 25px;
+    color: #58595b;
+    text-align: justify; 
+}
+
+.container2 button{
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    background-color: red;
+    text-transform: uppercase;
+    border: none;
+    padding: 1% 20px 1% 20px;
+    position: relative;
+    top: 85%; left: 70%;
+    cursor: pointer;
+}
+
+.container2 button:hover{
+    color: #58595b;
+}
+
+.container3{
+    width: 100%;
+    height: 300px;
+    float: left;
+    margin-top: 5%;
+    background-color: #F2F4F7;
+    display: flex; align-items: center;
+}
+.list{
+    width: 80%;
+    margin-top: 10px;
+    margin:auto;
+}
+.container3 .list ul{
+    list-style: none;
+    padding: 0; margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 25px;
+    margin-left: 30px;
+}
+.container3 ul li{
+    font-size: 16px;
+    color: #58595b;
+}
+
+.container4{
+    width: 75%; float: left;
+    margin: auto; margin-top: 5%;
+    padding: 20px 10% 20px 10%;
+}
+
+.container4 .g_img{
+    width: 25%;
+    height: 200px;
+    float: left; 
+}
+
+.container4 .g_btn{
+    float: left;
+    width: 150px;
+    height: 40px;
+    border: none;
+    text-transform: uppercase;
+    background-color: red;
+    margin-top: 50px; margin-left: 10px;
+    color: white;
+    font-size: 16px;
+    padding: 1% 20px 1% 20px;
+    cursor: pointer;
+}
+
+.g_btn:hover{
+    color: #58595b;
+}
+
+.container5{
+    width: 75%; float: left;
+    margin: auto; margin-top: 5%;
+    padding: 20px 10% 20px 10%;
+    background-color: white;
+}
+
+.container5 .contact{
+    width: 100%;
+    float: left;
+    height: 300px;
+}
+.container5 .contact_info{
+    width: 30%;
+    height: 80%;
+    float: left;
+    margin-top: 10px; margin-bottom: 40px;
+    padding: 0 15px;
+}
+
+.contact_info .icon{
+    width: 65px; height: 65px;
+    background-color: #FFD105;
+    font-size: 30px; 
+    display: flex;
+    justify-content: center; align-items: center;
+    margin-bottom: 20px;
+}
+.contact_info p{
+    font-size: 18px;
+    color: #58595b;
+}
+
+.social{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.social_media1{
+    width: 15%;
+    height: 80%;
+    color: #58595b;
+    margin-left: 20px; 
+    display: flex;
+    align-items: center; justify-content: center;
+    font-size: 30px;
+    gap: 10px;
+    cursor: pointer;
+}
+.social_media1 i:hover{
+   color: #F2F4F7;
+}
+.social_media2{
+    width: 20%;
+    height: 90%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+.social_media3{
+    width: 20%;
+    height: 80%;
+    margin-left: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.container6{
+    margin-top: 5%;
+}
+
+.container7{
+    width: 75%;  
+    float: left;
+    margin: auto; margin-top: 5%;
+    padding: 20px 10% 20px 10%;     
+    background-color: white;  
+    margin-left: 10px;
+}
+
+.container7 .about_info1{
+    width: 30%;
+    height: 250px; float: left;
+    background-color: #F2F4F7;
+    padding:15px;
+}
+.container7 .about_info2{
+    width: 30%;
+    height: 250px; float: left;
+    background-color: white;
+    padding:15px;
+}
+.container7 .about_info3{
+    width: 30%;
+    height: 250px; float: left;
+    background-color: #F2F4F7;
+    padding:15px;
+}
+.container7 h3{
+    font-size: 24px;
+    color: #58595b;
+    
+}
+.container7 ul li{
+    font-size: 18px;
+    line-height: 30px;
+    color: #58595b;
+}
+.container7 ul{
+    padding-left: 10px;
+}
+
+
+.footer{
+    width: 100%;
+    height: 60px;
+    background-color: #333333;
+    box-sizing: border-box;
+    float: left;
+    margin: 0; padding: 0;
+}
+
+.footer .f1{
+    width: 20%;
+    height: 100%;
+    float: left;
+    color: #818180;
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+}
+.footer .f2{
+    width: 20%;
+    height: 100%;
+    float: left;
+    color: #818180;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+.footer .f3{
+    width: 30%;
+    height: 100%;
+    float: left;
+    color: #818180;
+    margin-left: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.footer a{
+    color: #818180;
+}
+
+.footer a:hover{
+    color: #FFD105;
+}
+
+/* ================= MOBILE VIEW ================= */
+@media (max-width: 667px){
+
+/* ===== MENU ===== */
+.menu{
+    height: 70px;
+}
+
+.menu_logo{
+    width: 40%;
+}
+
+.menu_logo img{
+    width: 90px;
+    margin-top: 10px;
+}
+
+.menu_option{
+    width: 60%;
+}
+
+.menu_option ul{
+    display: none;   /* HIDE MENU LIST */
+}
+
+.menu_option .book_btn{
+    display: none;   /* HIDE BOOK BUTTON */
+}
+
+.menu_option .menu_btn{
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 15px;
+    width: 70px;
+    height: 35px;
+}
+
+/* ===== SLIDER ===== */
+.slider{
+    height: 350px;
+}
+
+/* ===== FILTER BOX ===== */
+.slider_filter{
+    position: relative;
+    top: 0;
+    height: auto;
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+.filter_box{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.filter_box input,
+.filter_box select{
+    width: 100%;
+}
+
+/* ===== CONTAINER 1 ===== */
+.container1{
+    width: 100%;
+    padding: 10px;
+    height: auto;
+}
+
+
+/* ===== ROOMS ===== */
+.container2 .room1{
+    width: 100%;
+    height: 220px;              /* mobile friendly height */
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+}
+
+/* text section below image */
+.container2 .info1{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.container2 h2{
+    font-size: 18px;
+}
+
+.container2 p{
+    font-size: 14px;
+    line-height: 22px;
+}
+
+/* Read More button */
+.container2 button{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    top: auto;
+    left: auto;
+}
+
+.container2 .room1{
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;   /* IMPORTANT */
+    margin-bottom: 10px;
+}
+
+/* Read More button inside image */
+.container2 .room1 button{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 110px;
+    height: 35px;
+    font-size: 14px;
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+/* ===== FACILITY LIST ===== */
+.container3{
+    height: auto;
+}
+
+.container3 .list ul{
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/* ===== GALLERY ===== */
+.container4{
+    width: 50%;
+    padding: 10px; 
+}
+
+.container4 .g_img{
+    width: 100%;
+    margin-bottom: 10px; margin-left: 100px;
+}
+
+/* ===== CONTACT ===== */
+.container5{
+    width: 50%;
+    padding: 10px;
+    margin-left: 100px;
+}
+
+/* Contact section */
+.container5 .contact{
+    height: auto;
+}
+
+.container5 .contact_info{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact_info .icon{
+    margin: auto;
+}
+
+/* Social section */
+.social{
+    flex-direction: column;
+    height: auto;
+}
+
+.social_media1{
+    width: 100%;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.social_media2,
+.social_media3{
+    width: 50%;
+    height: 500px;
+    margin-top: 15px;
+    
+}
+
+/* ===== ABOUT ===== */
+.container7{
+    width: 100%;
+    padding: 10px;
+}
+
+.container7 .about_info1,
+.container7 .about_info2,
+.container7 .about_info3{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+    height: auto;
+}
+
+.footer .f1,
+.footer .f2,
+.footer .f3{
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
+    text-align: center;
+}
+}
+
+
+/* ============Room Section===================== */
+.room_sec{
+    width: 75%;
+    height: auto;
+    background-color: white;
+    margin: 50px auto; 
+    margin-top: 50px;
+    padding: 20px 10% 20px 10%;
+    
+}
+
+.o_title_sub{
+    font-size: 18px;
+    color: #58595b;
+    margin-bottom: 15px;
+}
+
+.room_sec .room_container{
+    width: 31%;
+    height: 350px;
+    background-color: white;
+    float: left;
+    margin: 10px 10px;
+}
+
+.room_img{
+    width: 100%;
+    height: 200px;
+    transition: 0.5s;
+}
+.room_sec .room_img:hover{
+    transform: scale(1.1);
+}
+
+.room_info{
+    width: 85%;
+    height: 150px;
+    background-color: black;
+    position: relative;
+    left: 7%; bottom: 20px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border-top: 5px solid #E0B806;
+}
+.room_info:hover{
+    border-top: 5px solid white; 
+    box-sizing: border-box;
+}
+.room_info a{
+    color: #888888;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 40px;
+    margin: 0;
+}
+.room_info a:hover{
+    color: #E0B806;
+}
+
+.room_info p{
+    color: #888888;
+    margin-bottom: 10px;
+}
+
+
+
+@media (max-width:667px){
+
+.room_sec{
+    width: 95%;
+    padding: 15px;
+}
+
+/* Title */
+.o_title_sub{
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Room Card */
+.room_sec .room_container{
+    width: 100%;
+    height: auto;
+    float: none;
+    margin: 20px 0;
+}
+
+/* Image */
+.room_img{
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Reduce zoom overflow */
+.room_img:hover{
+    transform: scale(1.03);
+}
+
+/* Info box */
+.room_info{
+    width: 95%;
+    height: auto;
+    left: 2.5%;
+    bottom: 15px;
+    padding: 12px;
+}
+
+/* Title */
+.room_info a{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+/* Text */
+.room_info p{
+    font-size: 14px;
+}
+
+}
+
+
+
+/* ==========================  BANQUETS & MEETINGS  ================================= */
+
+.banquets_meeting{
+    width: 80%;
+    height: auto;
+    background-color: white;
+    margin: 50px auto; 
+    margin-top: 50px;
+    padding: 20px 5% 20px 5%;    
+    box-sizing: border-box;
+    overflow: hidden; 
+    display: block;
+}
+.inqurie_btn{
+    width: 200px;
+    height: 40px; 
+    border: none;
+    text-transform: uppercase;
+    background-color: red;
+    margin-top: 30px; 
+    margin-left: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+}
+.inqurie_btn:hover{
+    color: #58595b;
+}
+
+.hall_container{
+    width: 45%;
+    height: 500px; float: left; 
+    background-color: white;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.hall_container:last-child{
+    margin-right: 0;
+}
+
+.hall_img{
+    width: 100%;
+    height:250px;
+    transition: 0.5s;
+}
+.hall_img:hover{
+    transform: scale(1.1);
+}
+
+.hall_info{
+    width: 85%;
+    height: 200px;
+    background-color: black;
+    position: relative;
+    left: 7%; bottom: 20px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border-top: 5px solid #E0B806;
+}
+#h1{
+    line-height: 25px;
+}
+.hall_info:hover{
+    border-top: 5px solid white; 
+    box-sizing: border-box;
+}
+.hall_info a{
+    color: #888888;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 40px;
+    margin: 0;
+}
+.hall_info a:hover{
+    color: #E0B806;
+}
+
+.hall_info p{
+    color: #888888;
+    margin-bottom: 10px;
+}
+
+
+@media (max-width:667px){
+
+.banquets_meeting{
+    width: 95%;
+    padding: 15px;
+}
+
+/* Button */
+.inqurie_btn{
+    width: 100%;
+    margin: 20px auto;
+}
+
+/* Hall card */
+.hall_container{
+    width: 100%;
+    height: auto;
+    float: none;
+    margin: 20px 0;
+}
+
+/* Image */
+.hall_img{
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Reduce zoom overflow */
+.hall_img:hover{
+    transform: scale(1.03);
+}
+
+/* Info box */
+.hall_info{
+    width: 95%;
+    height: auto;
+    left: 2.5%;
+    bottom: 15px;
+    padding: 12px;
+}
+
+/* Title */
+.hall_info a{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+/* Text */
+.hall_info p{
+    font-size: 14px;
+}
+
+}
+
+
+/* ===========================  DINING  ================================ */
+
+.dining_sec{
+    width: 75%;
+    height: auto;
+    background-color: white;
+    margin: 50px auto; 
+    margin-top: 50px;
+    padding: 20px 10% 20px 10%;
+    
+}
+.dining_sec .dining_container{
+    width: 31%;
+    height: 350px;
+    background-color: white;
+    float: left;
+    margin: 10px 10px;
+}
+
+.dining_img{
+    width: 100%;
+    height: 200px;
+    transition: 0.5s;
+}
+.dining_sec .dining_img:hover{
+    transform: scale(1.1);
+}
+
+.di {
+    color: #888888;
+}
+.di:hover{
+    color: #E0B806;
+} 
+.dining_info{
+    width: 85%;
+    height: 150px;
+    background-color: black;
+    position: relative;
+    left: 7%; bottom: 20px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border-top: 5px solid #E0B806;
+}
+.dining_info:hover{
+    border-top: 5px solid white; 
+    box-sizing: border-box;
+}
+.dining_info a{
+    color: #888888;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 40px;
+    margin: 0;
+}
+.dining_info a:hover{
+    color: #E0B806;
+}
+
+.dining_info p{
+    color: #888888;
+    margin-bottom: 10px;
+}
+
+
+@media (max-width:667px){
+
+.dining_sec{
+    width: 95%;
+    padding: 15px;
+}
+
+/* Card */
+.dining_sec .dining_container{
+    width: 100%;
+    height: auto;
+    margin: 15px 0;
+    float: none;
+}
+
+/* Image */
+.dining_img{
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Disable zoom overflow on mobile */
+.dining_sec .dining_img:hover{
+    transform: scale(1.03);
+}
+
+/* Info box */
+.dining_info{
+    width: 95%;
+    height: auto;
+    left: 2.5%;
+    bottom: 15px;
+    padding: 12px;
+}
+
+/* Title */
+.dining_info a{
+    font-size: 20px;
+    line-height: 32px;
+}
+
+/* Paragraph */
+.dining_info p{
+    font-size: 14px;
+}
+
+}
+
+
+/* ==================== SPA ======================= */
+.slider_spa{
+    width: 100%;
+    height: 730px;
+    background-size: cover;
+    animation: spa 20s infinite;
+    animation-delay: 2s;
+}
+@keyframes spa{
+    0%{background-image: url("images/home_page/spa1.jpg");}
+    16.66%{background-image: url("images/home_page/spa2.jpg");}
+    33.32%{background-image: url("images/home_page/spa3.jpg");}
+    49.98%{background-image: url("images/home_page/spa4.jpg");}
+    66.64%{background-image: url("images/home_page/spa5.jpg");}
+    83.30%{background-image: url("images/home_page/spa6.jpg");}
+    100%{background-image: url("images/home_page/spa7.jpg");}
+}
+
+.spa_sec{
+    width: 75%;
+    height: auto;
+    background-color: white;
+    margin: 50px auto; 
+    margin-top: 50px;
+    padding: 20px 10% 20px 10%;
+}
+
+.spa_list{
+    list-style: none;
+    padding-left: 0;
+}
+
+.spa_list li{
+    font-size: 18px;
+    line-height: 30px;
+    color: #58595b;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    transition: color 0.3s ease;
+}
+
+/* custom bullet */
+.spa_list li::before{
+    content: "--";
+    position: absolute;
+    left: 0;
+    color: #FFD105;
+    font-weight: bold;
+}
+
+/* hover effect */
+.spa_list li:hover{
+    color: #FFD105;
+    margin-left: 10px;
+}
+
+
+@media (max-width:667px){
+
+/* Slider */
+.slider_spa{
+    height: 300px;
+    background-position: center;
+}
+
+/* Section */
+.spa_sec{
+    width: 95%;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* List */
+.spa_list li{
+    font-size: 16px;
+    line-height: 26px;
+    padding-left: 20px;
+}
+
+/* Bullet */
+.spa_list li::before{
+    content: "•";
+    font-size: 18px;
+}
+
+/* Hover (mobile safe) */
+.spa_list li:hover{
+    margin-left: 5px;
+}
+
+}
+
+
+/* =========================    Special Offers  ===================================== */
+.slider_special-offer{
+    width: 100%;
+    height: 730px;
+    background-size: cover;
+    animation: special 20s infinite;
+    animation-delay: 2s;
+}
+@keyframes special{
+    0%{background-image: url("images/home_page/special1.jpg");}
+    12.5%{background-image: url("images/home_page/special2.jpg");}
+    25%{background-image: url("images/home_page/special3.jpg");}
+    37.5%{background-image: url("images/home_page/special4.jpg");}
+    50%{background-image: url("images/home_page/special5.jpg");}
+    62.5%{background-image: url("images/home_page/special6.jpg");}
+    75%{background-image: url("images/home_page/special7.jpg");}
+    87.5%{background-image: url("images/home_page/special8.jpg");}
+    100%{background-image: url("images/home_page/special9.jpg");}
+}
+
+.offer_sec{
+    width: 80%;
+    height: auto;
+    background-color: white;
+    margin: auto; 
+    margin-top: 50px;
+    padding: 20px 15px 20px 15px;
+}
+.offer_title{
+    font-size: 24px;
+    color: #FFD105;
+    font-weight: 600;
+    margin-top: 5%; margin-bottom: 20px;
+}
+.offer_container1{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    box-sizing: border-box;
+    /* border: 2px solid black; */
+    box-shadow:
+        0 0 0 3px white,
+        0 6px 12px rgba(0,0,0,0.6);
+}
+.offer_img{
+    width: 40%;
+    height: 500px;
+    float: left;
+}
+.offer_info{
+    width: 35%;
+    height: 80%;
+    float: left;
+    background-color: white;
+    padding: 0 15px;
+}
+.offer_para{
+    font-size: 18px;
+    color: #58595b;
+    margin-bottom: 10px; 
+    margin-top: 0;
+}
+.offer_info ul{
+    padding-left: 10px;
+}
+.offer_info ul li{
+    position: relative;
+    padding-left: 0px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+/* hover */
+.offer_info ul li:hover{
+    transform: translateX(10px);
+}
+
+.offer_book-btn{
+    width: 25%;
+    height: 350px;
+    float: left;
+    background-color: black;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn1{
+    width: 80%;
+    height: 40px; 
+    border: none;
+    text-transform: uppercase;
+    background-color: red;
+    margin-top: 30px; 
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+}
+.btn1:hover{
+    color: #58595b;
+}
+.btn2{
+    width: 80%;
+    height: 40px;  clear: both;
+    border: none;
+    text-transform: uppercase;
+    background-color: red;
+    margin-top: 30px; 
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+}
+.btn2:hover{
+    color: #58595b;
+}
+
+
+.offer_container2{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    box-sizing: border-box;
+    /* border: 2px solid black; */
+    box-shadow:
+        0 0 0 3px white,
+        0 6px 12px rgba(0,0,0,0.6);
+}
+.offer_container2 .offer_img{
+    width: 40%;
+    height: 300px;
+    float: left;
+}
+.offer_info{
+    width: 35%;
+    height: 80%;
+    float: left;
+    background-color: white;
+    padding: 0 15px;
+}
+.offer_para{
+    font-size: 18px;
+    color: #58595b;
+    margin-bottom: 10px; 
+    margin-top: 0;
+}
+.offer_info ul{
+    padding-left: 10px;
+}
+.offer_info ul li{
+    position: relative;
+    padding-left: 0px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+/* hover */
+.offer_info ul li:hover{
+    transform: translateX(10px);
+}
+
+.offer_container2 .offer_book-btn{
+    width: 25%;
+    height: 200px;
+    float: left;
+    background-color: black;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn1{
+    width: 80%;
+    height: 40px; 
+    border: none;
+    text-transform: uppercase;
+    background-color: red;
+    margin-top: 30px; 
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+}
+.btn1:hover{
+    color: #58595b;
+}
+.btn2{
+    width: 80%;
+    height: 40px;  clear: both;
+    border: none;
+    text-transform: uppercase;
+    background-color: red;
+    margin-top: 30px; 
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+}
+.btn2:hover{
+    color: #58595b;
+}
+
+.offer_container5{
+    width: 90%; float: left;
+    margin-left: 150px; margin-top: 5%;
+    padding: 20px 15px 20px 15px;
+    background-color: white;
+}
+
+.offer_container5 .contact{
+    width: 100%;
+    float: left;
+    height: 300px;
+}
+.offer_container5 .contact_info{
+    width: 30%;
+    height: 80%;
+    float: left;
+    margin-top: 10px; margin-bottom: 40px;
+    padding: 0 15px;
+}
+
+.contact_info .icon{
+    width: 65px; height: 65px;
+    background-color: #FFD105;
+    font-size: 30px; 
+    display: flex;
+    justify-content: center; align-items: center;
+    margin-bottom: 20px;
+}
+.contact_info p{
+    font-size: 18px;
+    color: #58595b;
+}
+
+.social{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.social_media1{
+    width: 15%;
+    height: 80%;
+    color: #58595b;
+    margin-left: 20px; 
+    display: flex;
+    align-items: center; justify-content: center;
+    font-size: 30px;
+    gap: 10px;
+    cursor: pointer;
+}
+.social_media1 i:hover{
+   color: #F2F4F7;
+}
+.social_media2{
+    width: 20%;
+    height: 90%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+.social_media3{
+    width: 20%;
+    height: 80%;
+    margin-left: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.offer_container6{
+    width: 100%;
+    margin: 0;
+}
+
+.offer_container7{
+    width: 90%;  
+    float: left;
+    margin-left: 150px; margin-top: 5%;
+    padding: 20px 15px 20px 15px;     
+    background-color: white;  
+}
+
+.offer_container7 .about_info1{
+    width: 30%;
+    height: 250px; float: left;
+    background-color: #F2F4F7;
+    padding:15px;
+}
+.offer_container7 .about_info2{
+    width: 30%;
+    height: 250px; float: left;
+    background-color: white;
+    padding:15px;
+}
+.offer_container7 .about_info3{
+    width: 30%;
+    height: 250px; float: left;
+    background-color: #F2F4F7;
+    padding:15px;
+}
+.offer_container7 h3{
+    font-size: 24px;
+    color: #58595b;
+    
+}
+.offer_container7 ul li{
+    font-size: 18px;
+    line-height: 30px;
+    color: #58595b;
+}
+.offer_container7 ul{
+    padding-left: 10px;
+}
+
+
+
+@media (max-width:667px){
+
+/* Slider */
+.slider_special-offer{
+    height: 300px;
+    background-position: center;
+}
+
+/* Offer Section */
+.offer_sec{
+    width: 95%;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Containers */
+.offer_container1,
+.offer_container2{
+    flex-direction: column;
+    padding: 10px;
+}
+
+/* Image */
+.offer_img{
+    width: 100%;
+    height: 220px;
+}
+
+/* Info */
+.offer_info{
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+}
+
+.offer_container2 .offer_img{
+    width: 100%;
+}
+
+/* Button box */
+.offer_book-btn,
+.offer_container2 .offer_book-btn{
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
+}
+
+/* Buttons */
+.btn1,.btn2{
+    width: 90%;
+    margin-top: 15px;
+}
+
+/* Offer text */
+.offer_para{
+    font-size: 16px;
+}
+
+/* Container 5 */
+.offer_container5{
+    width: 100%;
+    margin-left: 0;
+}
+
+/* Contact */
+.offer_container5 .contact{
+    height: auto;
+}
+
+.offer_container5 .contact_info{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Social */
+.social{
+    flex-direction: column;
+    height: auto;
+}
+
+.social_media1,
+.social_media2,
+.social_media3{
+    width: 90%;
+    height: 150px;
+    margin-left: 0;
+}
+
+/* Container 7 */
+.offer_container7{
+    width: 100%;
+    margin-left: 0;
+}
+
+.offer_container7 .about_info1,
+.offer_container7 .about_info2,
+.offer_container7 .about_info3{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.offer_container7 h3{
+    font-size: 20px;
+}
+
+.offer_container7 ul li{
+    font-size: 16px;
+}
+
+}
+
+
+
+/* ======================== Gallery =================================== */
+.gallery_sec{
+    width: 80%;
+    height: auto;
+    background-color: white;
+    margin: auto; 
+    margin-top: 100px;
+    padding: 20px 15px 20px 15px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+}
+.gallery_sec h1{
+    grid-column: 1 / -1;
+}
+.gallery_img{
+    width: 100%;
+    height: 200px;
+    background-color: white;
+}
+
+
+@media (max-width: 667px){
+
+.gallery_sec{
+    width: 95%;
+    margin-top: 50px;
+    padding: 10px;
+    grid-template-columns: repeat(1, 1fr); /* 1 image per row */
+    gap: 15px;
+}
+
+.gallery_sec h1{
+    font-size: 20px;
+    text-align: center;
+}
+
+.gallery_img{
+    height: 180px;
+}
+}
+
+
+/* ============================ Contact ========================================================== */
+.contact_slider{
+    width: 100%;
+    height: 730px;
+    background-size: cover;
+    animation: contact 10s infinite ease-in-out;
+}
+@keyframes contact{
+    0%{background-image: url("https://www.ohotelsindia.com/pune/images/4eb7e9c875fa94229b51cffcaa47e599.jpg");}
+    33.33%{background-image: url("https://www.ohotelsindia.com/pune/images/08ca5e1ea6e7bbe9c29e30fa2cf5e97b.jpg");}
+    66.66%{background-image: url("https://www.ohotelsindia.com/pune/images/b4e86835cbf6e11dd7b0ebb1ed72341f.jpg");}
+    100%{background-image: url("https://www.ohotelsindia.com/pune/images/6e6b1838d12de5dbb7faa1f73b7ce30a.jpg");}
+}
+
+
+@media (max-width: 667px){
+
+    .contact_slider{
+        height: 320px;
+        background-position: center;
+    }
+}
+
+/* ====================================== Blog ================================================ */
+.blog_slider{
+    width: 100%;
+    height: 730px;
+    background-size: cover;
+    animation: blog 20s infinite;
+}
+@keyframes blog{
+    0%{background-image: url("https://www.ohotelsindia.com/pune/images/f563fbcb98ac2b98260c8be22f03a1c1.jpg");}
+    10%{background-image: url("https://www.ohotelsindia.com/pune/images/f7de27a199d4e15ffd74ee8268299cd1.jpg");}
+    20%{background-image: url("https://www.ohotelsindia.com/pune/images/e8d51ff47e3979e646aadf5eaf1536f9.jpg");}
+    30%{background-image: url("https://www.ohotelsindia.com/pune/images/032fb97a509e83e6ad98bd398e140a5d.jpg");}
+    40%{background-image: url("https://www.ohotelsindia.com/pune/images/515821ecd18a599f4be9178dd7ed8ae3.jpg");}
+    50%{background-image: url("https://www.ohotelsindia.com/pune/images/fcdb77cdda63fb1eb1e3119493e29bd5.jpg");}
+    60%{background-image: url("https://www.ohotelsindia.com/pune/images/352c8ead9b2f5686b8912d41708975ba.jpg");}
+    70%{background-image: url("https://www.ohotelsindia.com/pune/images/50c312faa3912c5515820e4335039785.jpg");}
+    80%{background-image: url("https://www.ohotelsindia.com/pune/images/b9c8d533c48c67858d636454c908ee1a.jpg");}
+    90%{background-image: url("https://www.ohotelsindia.com/pune/images/1969b7d85d16de2361abeb42b55a0c66.jpg");}
+    100%{background-image: url("https://www.ohotelsindia.com/pune/images/d3cdb14c5c0480df386c531c69b1510d.jpg");}
+}
+
+.blog_sec{
+    width: 80%;
+    height: auto;
+    background-color: white;
+    margin: auto; 
+    margin-top: 50px;
+    padding: 20px 15px 20px 15px;
+}
+
+.blog_container{
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 15px;
+    box-sizing: border-box;
+    box-shadow:
+        0 0 0 3px white,
+        0 6px 12px rgba(0,0,0,0.6);
+}
+.blog_img{
+    width: 35%;
+    height: 100%;
+}
+.blog_info{
+    width: 35%;
+    height: 100%;
+    background-color: white;
+    padding: 0 15px;
+}
+.blog_info h3{
+    font-size: 20px;
+    margin: 60px 0 20px;
+    color: #333333;
+}
+.blog_info{
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #888888;
+}
+.blog_btn{
+    width: 25%;
+    height: 100%;
+    background-color: #EBEBEB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blog_btn1{
+    width: 80%;
+    height: 40px;  clear: both;
+    border: none;
+    text-transform: uppercase;
+    background-color: red;
+    margin-top: 30px; 
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+}
+.blog_btn1:hover{
+    color: #58595b;
+}
+/* ===============  mobile view===================== */
+@media (max-width: 667px){
+
+    .blog_slider{
+        height: 300px;
+    }
+
+    .blog_sec{
+        width: 95%;
+        padding: 10px;
+    }
+
+    .blog_container{
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .blog_img{
+        width: 100%;
+        height: 180px;
+    }
+
+    .blog_info{
+        width: 100%;
+        height: auto;
+        padding: 0;
+        text-align: center;
+    }
+
+    .blog_info h3{
+        margin: 10px 0;
+        font-size: 17px;
+    }
+
+    .blog_info{
+        font-size: 15px;
+    }
+
+    .blog_btn{
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .blog_btn1{
+        width: 70%;
+        margin: auto;
+    }
+}

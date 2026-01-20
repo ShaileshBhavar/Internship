@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>connection</title>
+</head>
+<body>
+    <!-- inline way -->
+     <!-- <button onclick="alert('click')">click</button> <br> -->
+     <!-- internal way -->
+    <!-- <script>
+
+        // alert("welcome")
+        document.write('welcome js')  
+        // console.log('welcome js')
+
+        // dom
+        var a=100;
+        var b=200;
+        var c=a+b;
+        alert(c)
+        document.write( "<br>",c)
+        console.log(c)
+    </script> -->
+      <!-- external way -->
+    <!-- <script src="app.js"></script> link external js file -->
+
+<script>
+    // var = global
+    var a=100;
+    if(true){
+        var a=200;
+        document.write(a);
+    }
+    document.write("<br>",a);
+
+    // let = local
+    let b=100;
+    if(true){
+        let b=200;
+        document.write("<br>",b);
+    }
+    document.write("<br>",b);
+
+    // const = unic
+    const demo="a2z";
+    // const demo = "a2z it hub";
+    document.write("<br>",demo);
+</script>
+
+</body>
+</html>
