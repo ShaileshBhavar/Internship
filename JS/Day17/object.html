@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var student={
+            name:"shailesh",
+            email:"sonu@gmail.com",
+            age: 20,
+            course:"JS"
+
+        }
+        // all call
+        console.log(student);
+
+        // single call
+        document.write("<br>",student.name);
+        document.write("<br>",student.age);
+
+        document.write("<br>")
+        //loop
+        var student={
+            name:"shailesh",
+            email:"sonu@gmail.com",
+            age: 20,
+            course:"JS"
+
+        }
+        for(info in student){
+            document.write("<br>",info);
+            document.write(":",student[info]);
+        }
+    </script>
+</body>
+</html>

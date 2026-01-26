@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // norm fun
+        function add(){
+            var a=100;
+            var b=10;
+            var c=a+b;
+            document.write("<br>"+c);
+        }
+        add();
+        add();
+
+        document.write("<br>");
+        document.write("<br>");
+
+        // para fun
+        function para(arg1,arg2){
+            var c=arg1+arg2;
+            document.write("<br>"+c);
+        }
+        para(10,20);
+        para(100,200);
+        para(1000,2000);
+
+        document.write("<br>");
+        document.write("<br>");
+
+        function name(){
+            var fname="A2Z";
+            var lname="IT HUB";
+            var fullname=fname+" "+lname;
+            return fullname;
+        }
+        var a=name();
+        document.write("<br>"+a);
+
+        document.write("<br>");
+        document.write("<br>");
+
+        // Named Function Expression
+        var ab=function demo(){
+            document.write("<br> Named Function Expression");
+        }
+        ab();
+
+        // Anonymous Function
+        var ab=function(){
+            document.write("<br> Anonymous Function");
+        }
+        ab();
+
+        // Arrow Function
+        var ab=()=>{
+            document.write("<br> Arrow Function");
+        }
+        ab();
+
+        document.write("<br>");
+        document.write("<br>");
+
+        //nested function
+        function f1(){
+            function f2(){
+                document.write("<br> nested function");
+            }
+            f2();
+        }
+        f1();
+        
+    </script>
+</body>
+</html>
