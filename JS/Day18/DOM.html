@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=document;
+        var a=document.head;
+        var a=document.body;
+        console.log(a);
+        // get
+        // set
+    </script>
+
+    <!-- by id -->
+     <h1 id="data1">Welcome JS</h1>
+     <h1 id="data2"></h1>
+    <script>
+        // get
+        var a=document.getElementById('data1').innerText;
+        console.log(a);
+
+        // set
+        document.getElementById('data2').innerText = a;
+    </script>
+
+    <!-- by class -->
+      <h2 class="demo">welcome JS 1</h2>
+      <h2 class="demo">welcome JS 2</h2>
+      <h2 class="demo">welcome JS 3</h2>
+      <h2 class="demo">welcome JS 4</h2>
+      <h2 class="demo">welcome JS 5</h2>
+      <h2 class="demo">welcome JS 6</h2>
+    <script>
+        //get
+        var b=document.getElementsByClassName('demo')[0].innerText;
+        console.log(b);
+
+        //set
+        document.getElementsByClassName('demo')[5].innerText="change";
+    </script>
+
+    <!-- by tag -->
+     <h3>Welcome JS</h3>
+     <h4></h4>
+     <script>
+        var c=document.getElementsByTagName('h3')[0].innerText;
+        console.log(c);
+
+        document.getElementsByTagName('h4')[0].innerText=c;
+     </script>
+     
+    <!-- by name -->
+    <input type="text" name="user" value="Welcome JS">
+    <h2></h2>
+
+    <script>
+        // get
+        var d = document.getElementsByName('user')[0].value;
+        console.log(d);
+
+        // set
+        document.getElementsByTagName('h2')[0].innerText = d;
+    </script>
+</body>
+</html>

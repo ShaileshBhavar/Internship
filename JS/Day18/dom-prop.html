@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- innertext -->
+     <h1 id="data1"></h1>
+     <script>
+        //set
+        document.getElementById('data1').innerText="Welcome";
+     </script>
+
+     <!-- innerhtml -->
+     <h1 id="data2"></h1>
+     <script>
+        //set
+        document.getElementById('data2').innerHTML="<mark>Welcome</mark>";
+     </script>
+
+    <!-- value -->
+     <input type="text" id="data3" value="">
+     <script>
+        //set
+        document.getElementById('data3').value="A2Z IT HUB";
+     </script>
+
+     <div class="box"></div>
+     <script>
+        // set  
+        document.getElementsByClassName('box')[0].style.height="300px";
+        document.getElementsByClassName('box')[0].style.width="300px";
+        document.getElementsByClassName('box')[0].style.background="red";
+
+        document.getElementsByClassName('box')[0].style="height:200px; width:200px; background-color:green";
+     </script>
+
+     <img src="/CSS/Day11/images/gallery/dinner1.jpg" alt="" height="300px" width="300px" style="border: 5px solid black;" id="img">
+     <script>
+        // set
+        document.getElementById('img').setAttribute('style',"border:10px solid red");
+     </script>
+</body>
+</html>
