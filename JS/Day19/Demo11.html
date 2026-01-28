@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            position: relative; top: 200px;
+            
+        }
+        .box{
+            width: 400px;
+            height: 250px;
+            background-color: wheat;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+        }
+        input{
+            padding: 5px;
+            margin: 5px;
+            width: 36%;
+            margin-left: 10px;
+        }
+        select{
+            padding: 5px;
+            margin: 5px;
+            width: 40%;
+            margin-left: 10px;
+        }
+        button{
+            margin-left: 36%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1 style="text-align: center;">Converter</h1>
+            <input type="text" id="inputvalue" placeholder="Enter value"> =
+            <input type="text" id="outputvalue" readonly><br><br>
+
+            <select id="fromunit">
+                <option value="">From</option>
+                <option value="km">KM</option>
+                <option value="m">Meter</option>
+                <option value="kg">KG</option>
+                <option value="g">Gram</option>
+            </select>&nbsp;&nbsp;&nbsp;
+
+            <select id="tounit">
+                <option value="">To</option>
+                <option value="km">KM</option>
+                <option value="m">Meter</option>
+                <option value="kg">KG</option>
+                <option value="g">Gram</option>
+            </select> <br><br>
+
+            <button onclick="convert()">Converter</button>
+        </div>
+    </div>
+
+    <script>
+        function convert(){
+            let value = document.getElementById("inputvalue").value;
+            let from = document.getElementById("fromunit").value;
+            let to = document.getElementById("tounit").value;
+
+            // length units & weight units
+            let length = ["km","m"];
+            let weight = ["kg","g"];
+
+            // ❌ wrong unit type
+            if(
+                (length.includes(from) && weight.includes(to)) ||
+                (weight.includes(from) && length.includes(to))
+            ){
+                alert("Wrong Choice!");
+                resetAll();
+                return;
+            }
+
+            let result = 0;
+
+            if(from === "km" && to === "m")
+                result = value * 1000;
+            else if(from === "m" && to === "km")
+                result = value / 1000;
+            else if(from === "kg" && to === "g")
+                result = value * 1000;
+            else if(from === "g" && to === "kg")
+                result = value / 1000;
+            else
+                result = value; // same unit
+
+            document.getElementById("outputvalue").value = result;
+        }   
+    </script>
+</body>
+</html>

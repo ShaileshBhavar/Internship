@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="save.html" onsubmit="return confirm('Are u sure...')">
+        <label>Name:-</label>
+        <input type="text" id="name" onfocus="focus1()" onblur="blur1()" onselect="select1()"><br><br>
+
+        <label>Email:-</label>
+        <input type="text" id="email" onfocus="focus1()" onblur="blur1()" onselect="select1()"><br><br>
+
+        <label>Mobile:-</label>
+        <input type="tel" id="mobile" onfocus="focus1()" onblur="blur1()" onselect="select1()"><br><br>
+
+        <label>Sub:-</label>
+        <select onchange="alert('change')">
+            <option>Choose</option>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+        </select><br><br>
+
+        <button type="submit">Save</button>
+    </form>
+
+    <script>
+        function focus1(){
+            document.getElementById("name").style.backgroundColor="yellow"; 
+            document.getElementById("email").style.backgroundColor="yellow"; 
+            document.getElementById("mobile").style.backgroundColor="yellow"; 
+        }
+        function blur1(){
+            document.getElementById("email").style.backgroundColor="grey"; 
+            document.getElementById("name").style.backgroundColor="grey";
+            document.getElementById("mobile").style.backgroundColor="grey";
+        }
+        function select1(){
+            document.getElementById("mobile").style.backgroundColor="purple"; 
+            document.getElementById("name").style.backgroundColor="purple";
+            document.getElementById("email").style.backgroundColor="purple";
+        }
+    </script>
+</body>
+</html>

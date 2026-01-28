@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body" onkeypress="press1()" onkeydown="down1()" onkeyup="up1()">
+    <!-- onkeydown, onkeyup, onkeypress -->
+   <!--   <script>
+        function press1(){
+            document.getElementById("body").style.backgroundColor="red";
+        }
+        function down1(){
+            document.getElementById("body").style.backgroundColor="yellow";
+        }
+        function up1(){
+            document.getElementById("body").style.backgroundColor="green";
+        }
+     </script> -->
+
+    <input type="text" id="rate" placeholder="rate" onkeyup=""> <br><br>
+    <input type="text" id="qnt" placeholder="qnt" onkeyup="calculate()"> <br><br>
+    <input type="text" id="total" placeholder="total" readonly><br><br>
+     
+     <script>
+        function calculate(){
+            var rate = document.getElementById("rate").value;
+            var qnt = document.getElementById("qnt").value;
+            var total = parseFloat(rate) * parseFloat(qnt);
+            document.getElementById("total").value = total;
+        }
+     </script>
+</body>
+</html>
