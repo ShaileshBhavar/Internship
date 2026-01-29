@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            height: 400px; width: 400px; float: left;
+            background-color: yellow;
+        }
+        .box1 img{
+            background-size: 100% 100%; height: 400px; width: 400px;
+        }
+        .box2{
+            height: 400px; width: 100px;  float: left;
+            background-color: red;
+        }
+        .box2 img{
+            background-size: 100% 100%; height: 97px; width: 100px;
+            margin: 0; padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1EDuaZFiSj3kxEz3tYcymQMP-Ace6SxIoFg&s" alt="" id="imgmain">
+    </div>
+    <div class="box2">
+        <img src="https://i.pinimg.com/236x/4b/75/52/4b755265f186daeb78b2a705815f2870.jpg" alt="" onclick="fun1()" id="img1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-CSDkqh5TixRfYS35MMlfQE526LMJryS83A&s" alt="" onclick="fun2()" id="img2">
+        <img src="https://images.pexels.com/photos/35643444/pexels-photo-35643444/free-photo-of-close-up-of-photographer-holding-a-camera-outdoors.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" onclick="fun3()" id="img3">
+        <img src="https://media.istockphoto.com/id/1225211412/photo/camera-lens-during-media-production-event.jpg?s=612x612&w=0&k=20&c=J9IO5XtRQbEb8_iFWx6P6-G_4bpaed3DH_Q681glrW0=" alt="" onclick="fun4()" id="img4">
+    </div>
+
+    <script>
+        function fun1(){
+            var a=document.getElementById("img1").getAttribute('src');
+            document.getElementById("imgmain").setAttribute("src",a);
+        }
+        function fun2(){
+            var a=document.getElementById("img2").getAttribute('src');
+            document.getElementById("imgmain").setAttribute("src",a);
+        }
+        function fun3(){
+            var a=document.getElementById("img3").getAttribute('src');
+            document.getElementById("imgmain").setAttribute("src",a);
+        }
+        function fun4(){
+            var a=document.getElementById("img4").getAttribute('src');
+            document.getElementById("imgmain").setAttribute("src",a);
+        }
+    </script>
+</body>
+</html>
